@@ -1,2 +1,9 @@
 
 .DS_Store
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/prettier.xml
+.idea/ReactGround.iml
+.idea/vcs.xml
