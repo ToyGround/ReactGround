@@ -11,6 +11,7 @@ const Container = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width:100%;
   height: 100%;
 `;
@@ -25,7 +26,7 @@ function List({listData}) {
 
 const ItemContainer = styled.li``;
 const ItemLink = styled(Link)`
-  color: black;
+  color: black !important;
 `;
 const ItemTitle = styled.span``;
 const ItemAuthor = styled.span``;
