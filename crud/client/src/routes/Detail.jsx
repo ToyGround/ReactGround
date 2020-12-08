@@ -11,15 +11,22 @@ const getDetail = async (id) => {
   return response
 }
 
+const getComments = async (id) => {
+  const response = await fetch(`${process.env.REACT_APP_POSTS}/${id}/comments`).then(res=>res.json())
+  return response
+}
+
 function DetailRoute({match}) {
-  const [detailData, setData] = useState({})
+  const [detailData, setDetailData] = useState({})
+  const [commentsData, setCommentsData] = useState({})
 
   useEffect(() => {
-    getDetail(match.params.id).then(data => setData(data))
+    getDetail(match.params.id).then(data => setDetailData(data))
+    getComments(match.params.id).then(data => setCommentsData(data))
   },[])
 
   return (
-    <Detail detailData={detailData}/>
+    <Detail detailData={detailData} commentsData={commentsData}/>
   );
 }
 
