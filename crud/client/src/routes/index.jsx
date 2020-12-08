@@ -16,7 +16,7 @@ function RootRouter () {
       <Header />
       <Switch>
         <Route path={"/"} exact component={HomeRoute}/>
-        <Route path={"/detail:id"} component={DetailRoute}/>
+        <Route path={"/detail/:id"} component={DetailRoute}/>
         <Route path={"/create"} component={CreateRoute}/>
         <Redirect path={"*"} to={"/"}/>
       </Switch>
