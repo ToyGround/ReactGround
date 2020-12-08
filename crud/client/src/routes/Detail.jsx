@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import Detail from '../components/Detail';
 
 DetailRoute.propTypes = {
   
 };
 
-function DetailRoute(props) {
+const getDetail = async (id) => {
+  const response = await fetch(`${process.env.REACT_APP_POSTS}/${id}`).then(res=>res.json())
+  return response
+}
+
+function DetailRoute({match}) {
+  const [detailData, setData] = useState({})
+
+  useEffect(() => {
+    getDetail(match.params.id).then(data => setData(data))
+  },[])
+
   return (
-    <div></div>
+    <Detail detailData={detailData}/>
   );
 }
 
