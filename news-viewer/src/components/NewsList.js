@@ -9,7 +9,7 @@ const {URL, API_KEY} = config;
 const Container = styled.div`
   width: 768px;
   padding-bottom: 3rem;
-  marign : 2rem auto 0;
+  margin : 2rem auto 0;
   box-sizing: border-box;
   @media screen and (max-width: 768px) {
   width: 100%;
