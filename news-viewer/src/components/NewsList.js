@@ -18,7 +18,7 @@ const Container = styled.div`
   }
 `;
 
-const NewsList = () => {
+const NewsList = ({category}) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
 
@@ -26,7 +26,8 @@ const NewsList = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios(`${URL + API_KEY}`);
+        const query = category === 'all' ? '' : `&category=${category}`;
+        const response = await axios(`${URL + API_KEY + query}`);
         setData(response?.data?.articles);
       } catch (e) {
         console.log(e);
@@ -34,7 +35,7 @@ const NewsList = () => {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [category]);
 
   if (loading) return <Container>대기중...</Container>;
   if (!data) return null;
