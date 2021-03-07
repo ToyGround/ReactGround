@@ -29,6 +29,13 @@ function* decreaseSaga() {
 }
 
 export function* counterSaga(){
+  /**
+   * takeEvery는 많은 이벤트가 오면 순차적으로 이벤트가 처리되는 반면
+   * takeLatest는 여러 이벤트가 들어오더라도 딱 1번 마지막으로 실행된 작업만 수행된다.
+   * 아래의 코드는 +1 증가 이벤트가 여러번 입력되면 어려번 처리 되고, -1 감소 이벤트가 어려번 입력되면 마지막 1번만 수행된다.
+   * 예) +1을 3번 누르면 3이 증가가 되고 -1을 3번 누르면 -1 만 처리가 된다.
+   *  */
+
   // takeEvery는 들어오는 모든 액션에 대해 작업을 처리함
   yield takeEvery(INCREASE_ASYNC, increaseSaga)
 
