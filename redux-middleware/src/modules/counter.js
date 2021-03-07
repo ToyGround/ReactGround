@@ -10,12 +10,12 @@ export const decrease = createAction(DECREASE);
  * ReudxThunk function
  * @description reduxThunk function, 비동기 통신을 위해 setTimeOut 처리함
  * */
-export const increaseThunk = () => dispatch => {
+export const increaseAsync = () => dispatch => {
   setTimeout(() => {
     dispatch(increase());
   }, 1000);
 };
-export const decreaseThunk = () => dispatch => {
+export const decreaseAsync = () => dispatch => {
   setTimeout(() => {
     dispatch(decrease());
   }, 1000);
