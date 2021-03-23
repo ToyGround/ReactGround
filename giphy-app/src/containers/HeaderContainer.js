@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../components/Header';
+import config from '../config'
 
 const Container = styled.header`
   display: flex;
@@ -13,22 +15,11 @@ const Container = styled.header`
   color: white;
   background: black;
 `;
-const Logo = styled.div`
-  img {
-    width: 310px;
-  }
-`;
-const Utils = styled.div`
-  
-`;
 
 function HeaderContainer(props) {
   return (
     <Container>
-      <Logo><img
-        src="https://developers.giphy.com/branch/master/static/header-logo-8974b8ae658f704a5b48a2d039b8ad93.gif"
-        alt=""/></Logo>
-      <Utils children="검색폼 영역"/>
+      <Header logo={config.LOGO} />
     </Container>
   );
 }
