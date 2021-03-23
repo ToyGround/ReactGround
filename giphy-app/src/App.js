@@ -1,6 +1,12 @@
+import React from 'react';
+import GlobalStyle from './lib/GlobalStyle';
+
 function App() {
   return (
-    <div>GIPHY APP</div>
+    <>
+      <GlobalStyle />
+      <div>GIPHY APP</div>
+    </>
   );
 }
 
