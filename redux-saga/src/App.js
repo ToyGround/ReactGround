@@ -17,10 +17,16 @@ function App() {
     <div className="App">
       <button onClick={onClick}>랜덤이미지 호출</button>
       {loading && <div>로딩중..</div>}
-      {giphy && giphy.map(item => <div key={item.id}>
-          <img src={item.images.original.url} alt={item.title}/>
-          <p>{item.title}</p>
-      </div>)}
+      {giphy && (Array.isArray(giphy) ?
+          giphy.map(item => <div key={item.id}>
+            <img src={item.images.original.url} alt={item.title}/>
+            <p>{item.title}</p>
+          </div>)
+          : <div>
+            <img src={giphy.images.original.url} alt={giphy.title}/>
+            <p>{giphy.title}</p>
+          </div>
+      )}
     </div>
   );
 }

@@ -6,7 +6,7 @@ import {call, put, takeLatest} from 'redux-saga/effects';
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const callAPI = async () => {
-  const response = await axios(`http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=5&offset=5&random_id=e826c9fc5c929e0d6c6d423841a282aa`);
+  const response = await axios(`http://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`);
   console.log('[callAPI]', response)
   return response.data;
 };
