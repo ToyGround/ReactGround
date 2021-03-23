@@ -1,10 +1,12 @@
 import React from 'react';
 import GlobalStyle from './lib/GlobalStyle';
+import HeaderContainer from './containers/HeaderContainer';
 
 function App() {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle/>
+      <HeaderContainer/>
       <div>GIPHY APP</div>
     </>
   );
