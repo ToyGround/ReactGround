@@ -14,6 +14,7 @@ export default {
   TYPE   : {
     SEARCH  : 'search',
     RANDOM  : 'randomid',
-    TRENDING: 'trending'
+    TRENDING: 'trending',
+    CATEGORY: 'categories'
   }
 };
