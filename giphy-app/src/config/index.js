@@ -6,5 +6,14 @@ dotenv.config();
 export default {
   API    : process.env.REACT_APP_API,
   API_KEY: process.env.REACT_APP_API_KEY,
-  LOGO   : process.env.REACT_APP_LOGO
+  LOGO   : process.env.REACT_APP_LOGO,
+  KIND   : {
+    GIFS   : 'gifs',
+    STICKER: 'sticker'
+  },
+  TYPE   : {
+    SEARCH  : 'search',
+    RANDOM  : 'random',
+    TRENDING: 'trending'
+  }
 };
