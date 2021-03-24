@@ -1,13 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import GlobalStyle from './lib/GlobalStyle';
 import HeaderContainer from './containers/HeaderContainer';
+
+const Container = styled.main`
+  padding: 1rem;
+`
 
 function App() {
   return (
     <>
       <GlobalStyle/>
       <HeaderContainer/>
-      <div>GIPHY APP</div>
+      <Container>GIPHY APP</Container>
     </>
   );
 }
