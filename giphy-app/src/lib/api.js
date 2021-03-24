@@ -10,7 +10,7 @@ const {API, API_KEY} = config;
  * @returns {string}
  * */
 const createCallAPI = ({kind, type}) => {
-  return `${API}/${kind}/${type}?api_key=${API_KEY}`;
+  return type === 'randomid' ? `${API}/${type}?api_key=${API_KEY}` : `${API}/${kind}/${type}?api_key=${API_KEY}`;
 };
 
 /**
@@ -18,7 +18,7 @@ const createCallAPI = ({kind, type}) => {
  * @param {string} type [search, random, trending]
  * @returns {object}
  * */
-export const callAPI = async (kind, type) => {
+export const callAPI = async ({kind, type}) => {
   const api = createCallAPI({kind, type});
   const response = await axios(api);
   return response.data;
