@@ -18,8 +18,10 @@ const createCallAPI = ({kind, type}) => {
  * @param {string} type [search, random, trending]
  * @returns {object}
  * */
-export const callAPI = async ({kind, type}) => {
+export const callAPI = ({kind, type}) => {
   const api = createCallAPI({kind, type});
-  const response = await axios(api);
-  return response.data;
+  return async () => {
+    const response = await axios(api);
+    return response.data;
+  }
 };
