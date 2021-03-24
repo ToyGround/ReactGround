@@ -13,7 +13,7 @@ export default {
   },
   TYPE   : {
     SEARCH  : 'search',
-    RANDOM  : 'random',
+    RANDOM  : 'randomid',
     TRENDING: 'trending'
   }
 };
