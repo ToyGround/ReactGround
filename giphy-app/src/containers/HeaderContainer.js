@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
-import config from '../config'
+import config from '../config';
+import Category from '../components/Category';
 
 const Container = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: static;
   top: 0;
   left: 0;
@@ -17,9 +15,13 @@ const Container = styled.header`
 `;
 
 function HeaderContainer(props) {
+  const [menu, setMenu] = useState(false);
+  const onMenu = () => setMenu(!menu);
+
   return (
     <Container>
-      <Header logo={config.LOGO} />
+      <Header logo={config.LOGO} onMenu={onMenu}/>
+      <Category menu={menu}/>
     </Container>
   );
 }
