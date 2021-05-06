@@ -15,3 +15,5 @@ whois/.env.development
 whois/.env.production
 whois/.env.development
 crud/client/.eslintcache
+node_modules
+dist
