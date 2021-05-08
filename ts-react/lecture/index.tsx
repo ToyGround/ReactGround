@@ -5,4 +5,4 @@ import App from './App';
 
 const Hot = hot(App);
 
-ReactDOM.render(<App/>, document.querySelector('#root'));
+ReactDOM.render(<Hot/>, document.querySelector('#root'));
