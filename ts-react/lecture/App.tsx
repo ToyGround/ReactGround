@@ -1,12 +1,14 @@
-import * as React from 'react'
-import Gugudan from "./components/Gugudan";
+import * as React from 'react';
+import Gugudan from './components/Gugudan';
+import NumberBaseball from './components/NumberBaseball';
 
 const App = () => {
-    return (
-        <>
-            <Gugudan/>
-        </>
-    )
-}
+  return (
+    <>
+      <Gugudan/>
+      <NumberBaseball/>
+    </>
+  );
+};
 
-export default App
+export default App;
