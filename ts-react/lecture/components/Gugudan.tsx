@@ -29,6 +29,7 @@ export default function Gugudan() {
 
     return (
         <>
+            <h3>구구단 컴포넌트</h3>
             <p>{first} 곱하기 {second}는?</p>
             <form onSubmit={onSubmit}>
                 <input ref={inputEl} type="number" onChange={onChange} value={value}/>
