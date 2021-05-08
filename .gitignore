@@ -3,6 +3,7 @@
 
 # dependencies
 /node_modules
+node_modules
 /.pnp
 .pnp.js
 
@@ -11,14 +12,21 @@
 
 # production
 /build
+build
+dist
 
 # misc
 .DS_Store
+
 .env
 .env.local
 .env.development.local
+.env.development
 .env.test.local
 .env.production.local
+.env.production
+
+.eslintcache
 
 npm-debug.log*
 yarn-debug.log*
