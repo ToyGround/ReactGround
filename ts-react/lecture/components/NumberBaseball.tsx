@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {useState, useRef, useCallback} from 'react';
+import {useState, useRef, useCallback, useEffect} from 'react';
 import NumberBaseballTry from './NumberBaseballTry';
 
 const getNumbers = (): number[] => {
   const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const array = [];
   for (let i = 0; i < 4; i++) {
-    const chosen = candidates.slice(Math.floor(Math.random() * (9 - i)), 1)[0];
+    const chosen = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
     array.push(chosen);
   }
   return array;
@@ -74,9 +74,7 @@ export default function () {
         if (input) input.focus();
       }
     }
-
-
-  }, []);
+  }, [value, answer]);
 
   const onChange = useCallback<(e: React.ChangeEvent<HTMLInputElement>) => void>((e) => {
     setValue(e.target.value);
