@@ -84,9 +84,7 @@ export default function () {
         <input type="text" ref={inputEl} maxLength={4} value={value} onChange={onChange}/>
       </form>
       <p>시도 : {tries.length}</p>
-      {tries.map((v, i) => {
-        <NumberBaseballTry key={i} info={v}/>;
-      })}
+      {tries.map((v, i) => <NumberBaseballTry key={i} info={v}/>)}
     </>
   );
 }
