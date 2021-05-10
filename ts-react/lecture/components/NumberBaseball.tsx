@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {useState, useRef, useCallback, useEffect} from 'react';
+import {useCallback, useRef, useState} from 'react';
 import NumberBaseballTry from './NumberBaseballTry';
+import {ITries} from '../types';
 
 const getNumbers = (): number[] => {
   const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -11,11 +12,6 @@ const getNumbers = (): number[] => {
   }
   return array;
 };
-
-interface ITries {
-  type: string;
-  result: string
-}
 
 export default function () {
   const [answer, setAnswer] = useState(getNumbers());
