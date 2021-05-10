@@ -14,9 +14,9 @@ const getNumbers = (): number[] => {
 };
 
 export default function () {
-  const [answer, setAnswer] = useState(getNumbers());
-  const [value, setValue] = useState('');
-  const [result, setResult] = useState('');
+  const [answer, setAnswer] = useState<number[]>(getNumbers());
+  const [value, setValue] = useState<string>('');
+  const [result, setResult] = useState<string>('');
   const [tries, setTries] = useState<ITries[]>([]);
   const inputEl = useRef<HTMLInputElement>(null);
 
