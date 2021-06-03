@@ -1,15 +1,19 @@
 import React from 'react';
-import tw from 'twin.macro';
-
-const TitleContainer = tw.div`bg-blue-400 text-center p-5`;
-const Title = tw.h1`font-bold text-3xl text-white`;
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
     <>
-      <TitleContainer>
-        <Title>My Pland Components</Title>
-      </TitleContainer>
+      <Router>
+        <Switch>
+          <Route path={'/'} component={MainPage}/>
+        </Switch>
+      </Router>
     </>
   );
 }
